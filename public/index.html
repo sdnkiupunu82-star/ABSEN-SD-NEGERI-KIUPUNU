@@ -1,35 +1,5 @@
-<!doctype html>
-<html lang="id">
-<head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>ABSENSI SD NEGERI KIUPUNU</title>
-<link rel="stylesheet" href="/style.css">
-<script defer src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
-</head>
-<body>
-<div id="loginPage">
-  <div class="login-hero">
-    <div class="logo">🏫</div><div class="mini-label">SISTEM ABSENSI SEKOLAH</div>
-    <h1>ABSENSI SD NEGERI KIUPUNU</h1>
-    <p>Jl. Pelajar • Bikomo Selatan • Timor Tengah Utara • Nusa Tenggara Timur</p>
-    <div class="login-card"><h2>Selamat Datang 👋</h2><p>Masuk sesuai hak akses Anda.</p>
-      <input id="username" placeholder="Username" autocomplete="username">
-      <input id="password" type="password" placeholder="Password" autocomplete="current-password">
-      <button class="primary" onclick="doLogin()">🔐 Masuk</button>
-      <div class="demo">Demo: admin/admin123 · piket/piket123 · guru/guru123</div>
-    </div>
-  </div>
-</div>
-<div id="app" class="hidden">
- <aside>
-  <div class="brand">🎒 <span>ABSENSI<br>KIUPUNU</span></div>
-  <div id="profile"></div><nav id="nav"></nav>
-  <div class="creator">Dibuat oleh<br><b>Odi Funan</b></div><button class="logout" onclick="logout()">↪ Keluar</button>
- </aside>
- <main><header><div><h2 id="title">Dashboard</h2><small id="clock"></small></div><div class="top-msg">🌟 SD Negeri Kiupunu</div></header><section id="content"></section></main>
-</div>
-<div id="modal" class="modal hidden"><div class="modal-card"><button class="x" onclick="closeModal()">×</button><h2 id="modalTitle">📷 Kamera</h2><p id="modalHelp"></p>
- <div class="camera-box"><video id="video" autoplay muted playsinline></video><div class="face-guide"></div></div>
- <div id="camStatus" class="cam-status">Memuat...</div><button id="camAction" class="primary" onclick="cameraAction()">Mulai</button></div></div>
-<script src="/app.js"></script>
-</body></html>
+<!doctype html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Absensi SD Negeri Kiupunu V3</title><link rel="stylesheet" href="/style.css"><script defer src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script></head><body>
+<div id="loginPage"><div class="login"><div class="brandmark">🏫</div><div class="eyebrow">SISTEM ABSENSI SEKOLAH • V3</div><h1>SD NEGERI KIUPUNU</h1><p>Absensi guru dan siswa berbasis web dengan kamera, absensi manual, rekap dan pengaturan sekolah.</p><div class="loginbox"><input id="username" placeholder="Username"><input id="password" type="password" placeholder="Password" onkeydown="if(event.key==='Enter')doLogin()"><button class="primary" onclick="doLogin()">🔐 Masuk</button><small>Demo: admin/admin123 · piket/piket123 · guru/guru123</small></div></div></div>
+<div id="app" class="hidden"><aside><div class="brand">🎒 <b>ABSENSI<br>KIUPUNU</b><span>V3</span></div><div id="profile" class="profile"></div><nav id="nav"></nav><div class="sidebottom">Dibuat oleh <b>Odi Funan</b><button onclick="logout()">↪ Keluar</button></div></aside><main><header><div><h2 id="title">Dashboard</h2><small id="clock"></small></div><div class="schoolpill">SD Negeri Kiupunu</div></header><section id="content"></section></main></div>
+<div id="modal" class="modal hidden"><div class="modalcard"><button class="close" onclick="closeModal()">×</button><h2 id="modalTitle">📷 Kamera</h2><p id="modalHelp"></p><div class="camera"><video id="video" autoplay muted playsinline></video><div class="guide"></div></div><div id="camStatus" class="notice">Memuat...</div><button id="camAction" class="primary" onclick="cameraAction()">Mulai</button></div></div>
+<script src="/app.js"></script></body></html>

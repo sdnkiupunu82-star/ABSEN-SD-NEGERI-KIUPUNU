@@ -1,14 +1,9 @@
 {
-  "name": "absensi-sd-negeri-kiupunu-v2",
-  "version": "2.0.0",
-  "private": true,
-  "description": "Sistem Absensi Guru dan Siswa SD Negeri Kiupunu",
-  "main": "server.js",
-  "scripts": {"start":"node server.js"},
-  "dependencies": {
-    "bcryptjs":"^2.4.3",
-    "express":"^4.21.2",
-    "exceljs":"^4.4.0",
-    "jsonwebtoken":"^9.0.2"
-  }
+  "name":"absensi-sd-negeri-kiupunu-v3",
+  "version":"3.0.0",
+  "private":true,
+  "description":"Sistem Absensi Guru dan Siswa SD Negeri Kiupunu V3",
+  "main":"server.js",
+  "scripts":{"start":"node server.js"},
+  "dependencies":{"bcryptjs":"^2.4.3","express":"^4.21.2","exceljs":"^4.4.0","jsonwebtoken":"^9.0.2"}
 }
