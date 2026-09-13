@@ -84,3 +84,6 @@ header{background:rgba(255,255,255,.96);backdrop-filter:blur(8px)}
 .mini-bar.student{background:linear-gradient(to top,#0ca976,#55cbb0)}
 .mini-label{position:absolute;bottom:-15px;font-size:6.5px;color:#56739b;white-space:nowrap}
 @media(max-width:1100px){.attendance-middle{grid-template-columns:1fr 1fr}.attendance-middle .status-panel{grid-column:1/-1}}
+
+/* V3.7 — BACKGROUND SETELAH LOGIN 30% LEBIH TERANG */
+#app:before{filter:brightness(1.3)}
