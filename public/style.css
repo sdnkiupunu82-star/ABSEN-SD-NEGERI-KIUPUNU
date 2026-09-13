@@ -161,3 +161,20 @@ nav button,nav button span{font-size:13px!important}
 .sidebottom button,.sidebottom button span{font-size:13px!important}
 @media(min-width:901px){nav button{height:40px!important}.sidebottom button{height:42px!important}}
 @media(max-width:760px){aside{width:270px!important;left:-285px!important}.brand b{font-size:15px!important}.brand small{font-size:11px!important}nav button{height:44px!important;font-size:13px!important}nav button span{font-size:13px!important}.sidebottom button{font-size:13px!important}.sidebottom button span{font-size:13px!important}}
+
+/* V4.8 — Mobile sidebar text + 30% larger sidebar typography */
+@media(max-width:760px){
+  aside{width:290px!important;left:-305px!important;padding:14px 12px 12px!important}
+  aside.open{left:0!important}
+  .brand{justify-content:flex-start!important;height:58px!important;padding:2px 8px 10px!important;gap:11px!important}
+  .brand b{font-size:16.9px!important;line-height:1.15!important}
+  .brand small{font-size:12.5px!important}
+  .brand>span{display:block!important;font-size:24px!important;margin-left:auto!important}
+  #nav{overflow-y:auto!important;overflow-x:hidden!important}
+  nav{gap:4px!important;margin-top:14px!important}
+  nav button{height:48px!important;min-height:48px!important;padding:0 14px!important;font-size:16.9px!important;font-weight:700!important;gap:13px!important}
+  nav button span{display:inline!important;font-size:16.9px!important;line-height:1!important;white-space:nowrap!important}
+  .sidebottom{margin-top:8px!important}
+  .sidebottom button{height:48px!important;padding:0 14px!important;font-size:16.9px!important;font-weight:700!important}
+  .sidebottom button span{display:inline!important;font-size:16.9px!important}
+}
