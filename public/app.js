@@ -22,7 +22,12 @@ async function dashboard(){
   const tp=d.totalTeachers?Math.round(d.teacherPresent/d.totalTeachers*100):0;
   const sp=d.totalStudents?Math.round(d.studentPresent/d.totalStudents*100):0;
   const week=(d.week||[]).slice(-7);
-  const max=Math.max(1,...week.map(x=>Math.max(x.students||0,x.teachers||0)));
+  const all=(d.allAttendance||[]);
+  const max=Math.max(1,...all.map(x=>Math.max(x.students||0,x.teachers||0)));
+  const status=d.statusAll||{};
+  const totalAll=Object.values(status).reduce((a,b)=>a+(Number(b)||0),0);
+  const hadirAll=(status.hadir||0)+(status.terlambat||0);
+  const pctAll=totalAll?Math.round(hadirAll/totalAll*100):0;
   $('content').innerHTML=`
   <div class="dashboard-grid">
     <div class="dashboard-stats">
@@ -32,8 +37,8 @@ async function dashboard(){
       <div class="dash-stat purple"><div class="label">Hadir Hari Ini (Siswa)</div><div class="num">${d.studentPresent||0}</div><div class="icon">♟</div></div>
     </div>
     <div class="dash-panels">
-      <div class="dash-panel"><h3>Grafik Kehadiran 7 Hari Terakhir</h3><div class="chart-legend"><span><i class="dot blue"></i>Guru</span><span><i class="dot teal"></i>Siswa</span></div><div class="chart-area">${week.map(x=>{const gv=Math.round((x.teachers||0)/max*78),sv=Math.round((x.students||0)/max*78);const label=(x.date||'').slice(5).replace('-','/');return `<div class="bar-group"><div class="bar teacher" style="height:${Math.max(gv,5)}%"></div><div class="bar student" style="height:${Math.max(sv,5)}%"></div><div class="bar-label">${label}</div></div>`}).join('')}</div></div>
-      <div class="dash-panel status-panel"><div class="donut"><div class="donut-text">${Math.round((tp+sp)/2)}%<small>Hadir</small></div></div><div><h3>Status Kehadiran Hari Ini</h3><div class="status-list"><div class="status-item">Hadir <b>${(d.teacherPresent||0)+(d.studentPresent||0)}</b></div><div class="status-item">Izin <b>0</b></div><div class="status-item">Sakit <b>0</b></div><div class="status-item">Tanpa Keterangan <b>${(d.teacherMissing||0)+(d.studentMissing||0)}</b></div></div></div></div>
+      <div class="dash-panel dash-panel-wide"><h3>Grafik Seluruh Absensi</h3><div class="chart-subtitle">Menampilkan seluruh tanggal yang memiliki data absensi di sistem</div><div class="chart-legend"><span><i class="dot blue"></i>Guru</span><span><i class="dot teal"></i>Siswa</span></div><div class="chart-area all-attendance-chart">${all.length?all.map(x=>{const gv=Math.round((x.teachers||0)/max*78),sv=Math.round((x.students||0)/max*78);const label=(x.date||'').slice(5).replace('-','/');return `<div class="bar-group" title="${x.date}: Guru ${x.teachers||0}, Siswa ${x.students||0}"><div class="bar teacher" style="height:${Math.max(gv,4)}%"></div><div class="bar student" style="height:${Math.max(sv,4)}%"></div><div class="bar-label">${label}</div></div>`}).join(''):'<div class="empty">Belum ada data absensi.</div>'}</div></div>
+      <div class="dash-panel status-panel"><div class="donut" style="background:conic-gradient(#0ca976 0 ${pctAll}%,#f7aa1e ${pctAll}% 100%)"><div class="donut-text">${pctAll}%<small>Hadir</small></div></div><div><h3>Rekap Seluruh Absensi</h3><div class="status-list"><div class="status-item">Hadir <b>${status.hadir||0}</b></div><div class="status-item">Terlambat <b>${status.terlambat||0}</b></div><div class="status-item">Izin <b>${status.izin||0}</b></div><div class="status-item">Sakit <b>${status.sakit||0}</b></div><div class="status-item">Alpa <b>${status.alpa||0}</b></div></div></div></div>
     </div>
     <div class="dash-actions">
       <button class="dash-action blue" onclick="go('daily')"><span>▣</span>Daftar Hadir Harian</button>

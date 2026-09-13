@@ -52,3 +52,10 @@ header{background:rgba(255,255,255,.96);backdrop-filter:blur(8px)}
 .card,.dash-panel{box-shadow:0 8px 24px rgba(10,57,119,.12);background:rgba(255,255,255,.96)}
 @media(max-width:1000px){.login-hero-copy{left:4%;top:6%}.login-hero-copy h1{font-size:38px}.login-choice-card{right:4%;width:370px;min-width:0}}
 @media(max-width:720px){#loginPage{background-position:center}.login-hero-copy{left:6%;top:4%;text-align:left}.login-hero-copy .hero-badge{font-size:9px}.login-hero-copy h1{font-size:28px;margin:10px 0 6px}.login-hero-copy p{font-size:12px}.login-choice-card{left:6%;right:6%;bottom:5%;top:auto;transform:none;width:auto;padding:18px 16px 13px;border-radius:18px}.login-choice-card h2{font-size:19px}.login-choice-card>p{font-size:10px;margin-bottom:10px}.login-choice{padding:10px 11px;margin:6px 0}.login-choice b{font-size:11px}.login-choice small{font-size:8px}.login-school-foot{margin-top:8px;padding-top:8px}}
+
+
+/* FINAL SCHOOL BACKGROUND SCALE: show the complete supplied image at 70% of viewport */
+#loginPage{background-size:70% auto;background-position:center center;background-repeat:no-repeat;background-attachment:fixed;background-color:#dceeff}
+#app:before{background-size:70% auto;background-position:center center;background-repeat:no-repeat;background-color:#dceeff}
+.dash-panel-wide{min-width:0;overflow:hidden}.chart-subtitle{font-size:8px;color:#6b7f9f;margin:-3px 0 4px}.all-attendance-chart{overflow-x:auto;justify-content:flex-start;padding:10px 6px 24px;min-height:122px}.all-attendance-chart .bar-group{flex:0 0 28px;min-width:28px}.all-attendance-chart .bar-label{font-size:7px;transform:rotate(-45deg);transform-origin:top center;margin-top:5px;white-space:nowrap}.status-list{line-height:1.9}
+@media(max-width:900px){#loginPage,#app:before{background-size:70% auto;background-attachment:scroll}}
