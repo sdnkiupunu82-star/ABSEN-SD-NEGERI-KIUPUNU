@@ -182,3 +182,21 @@ aside .sidebottom button{display:flex!important;align-items:center!important;gap
   aside{height:100vh!important;min-height:100vh!important}
   aside nav{overflow-y:auto!important}
 }
+
+/* V4.2 — profile photos, mobile sidebar labels, and mobile login background */
+.profile-cell{display:flex;align-items:center;gap:7px;min-width:86px}.profile-thumb{width:42px;height:42px;border-radius:50%;object-fit:cover;border:2px solid #e3edf8;background:#f3f7fc}.photo-upload{position:relative;display:inline-flex!important;align-items:center;justify-content:center;padding:6px 8px!important;min-width:34px!important;min-height:32px!important}.photo-upload input{display:none!important}
+@media(max-width:760px){
+  /* On mobile the sidebar is expanded when opened, so labels must remain visible. */
+  aside{width:282px!important;left:-300px!important;padding:16px 13px 14px!important}
+  aside.open{left:0!important}
+  .brand{justify-content:flex-start!important}
+  .brand>div:not(.brand-avatar),.brand>span,nav button span,.sidebottom span{display:block!important}
+  .brand>span{margin-left:auto!important}
+  nav button{justify-content:flex-start!important;padding:0 13px!important;font-size:12px!important}
+  nav button span{font-size:12px!important}
+  .sidebottom{display:block!important}
+  /* Prevent the login photo from being vertically stretched on phones. */
+  #loginPage{min-height:100svh!important;height:100svh!important;padding:0!important;overflow:hidden!important;background-image:var(--school-bg)!important;background-size:cover!important;background-position:center center!important;background-repeat:no-repeat!important;background-attachment:scroll!important}
+  .login-reference{width:100vw!important;height:100svh!important;max-width:none!important;max-height:none!important;aspect-ratio:auto!important;border-radius:0!important;background-size:cover!important;background-position:center center!important;background-repeat:no-repeat!important;box-shadow:none!important}
+}
+@media(max-width:430px){.profile-thumb{width:38px;height:38px}.profile-cell{min-width:78px;gap:5px}.photo-upload{min-width:31px!important;padding:5px!important}}
