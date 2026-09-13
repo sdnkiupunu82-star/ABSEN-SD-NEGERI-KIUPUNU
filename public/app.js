@@ -31,10 +31,10 @@ async function dashboard(){
   $('content').innerHTML=`
   <div class="dashboard-grid">
     <div class="dashboard-stats">
-      <div class="dash-stat blue"><div class="label">Total Guru</div><div class="num">${d.totalTeachers||0}</div><div class="icon">♟</div></div>
-      <div class="dash-stat green"><div class="label">Total Siswa</div><div class="num">${d.totalStudents||0}</div><div class="icon">♟</div></div>
-      <div class="dash-stat orange"><div class="label">Hadir Hari Ini (Guru)</div><div class="num">${d.teacherPresent||0}</div><div class="icon">◉</div></div>
-      <div class="dash-stat purple"><div class="label">Hadir Hari Ini (Siswa)</div><div class="num">${d.studentPresent||0}</div><div class="icon">♟</div></div>
+      <button type="button" class="dash-stat blue" onclick="go('teachers')" title="Buka Data Guru"><span class="label">Jumlah Guru</span><span class="num">${d.totalTeachers||0}</span><span class="icon">♟</span><span class="stat-link">Lihat Data Guru →</span></button>
+      <button type="button" class="dash-stat green" onclick="go('students')" title="Buka Data Siswa"><span class="label">Jumlah Siswa</span><span class="num">${d.totalStudents||0}</span><span class="icon">♟</span><span class="stat-link">Lihat Data Siswa →</span></button>
+      <button type="button" class="dash-stat orange" onclick="go('teacherAttendance')" title="Buka Absensi Guru"><span class="label">Jumlah Guru Hadir</span><span class="num">${d.teacherPresent||0}</span><span class="icon">◉</span><span class="stat-link">Lihat Absensi Guru →</span></button>
+      <button type="button" class="dash-stat purple" onclick="go('studentAttendance')" title="Buka Absensi Siswa"><span class="label">Jumlah Siswa Hadir</span><span class="num">${d.studentPresent||0}</span><span class="icon">♟</span><span class="stat-link">Lihat Absensi Siswa →</span></button>
     </div>
     <div class="dash-panels">
       <div class="dash-panel dash-panel-wide"><h3>Grafik Seluruh Absensi</h3><div class="chart-subtitle">Menampilkan seluruh tanggal yang memiliki data absensi di sistem</div><div class="chart-legend"><span><i class="dot blue"></i>Guru</span><span><i class="dot teal"></i>Siswa</span></div><div class="chart-area all-attendance-chart">${all.length?all.map(x=>{const gv=Math.round((x.teachers||0)/max*78),sv=Math.round((x.students||0)/max*78);const label=(x.date||'').slice(5).replace('-','/');return `<div class="bar-group" title="${x.date}: Guru ${x.teachers||0}, Siswa ${x.students||0}"><div class="bar teacher" style="height:${Math.max(gv,4)}%"></div><div class="bar student" style="height:${Math.max(sv,4)}%"></div><div class="bar-label">${label}</div></div>`}).join(''):'<div class="empty">Belum ada data absensi.</div>'}</div></div>
