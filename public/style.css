@@ -84,3 +84,68 @@ header{background:rgba(255,255,255,.96);backdrop-filter:blur(8px)}
 .mini-bar.student{background:linear-gradient(to top,#0ca976,#55cbb0)}
 .mini-label{position:absolute;bottom:-15px;font-size:6.5px;color:#56739b;white-space:nowrap}
 @media(max-width:1100px){.attendance-middle{grid-template-columns:1fr 1fr}.attendance-middle .status-panel{grid-column:1/-1}}
+
+
+/* =========================================================
+   V4.0 PROFESSIONAL UI — SD NEGERI KIUPUNU
+   Background stays fully visible; readability is provided by opaque cards.
+   ========================================================= */
+:root{
+  --navy:#06275c;--navy2:#071d43;--blue:#0b78ed;--ink:#102e62;
+  --muted:#6b7f9f;--line:#dfe8f3;--surface:#ffffff;--soft:#f4f8fd;
+  --radius:14px;--shadow:0 10px 30px rgba(17,55,105,.10)
+}
+html,body{font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--ink)}
+/* Keep the supplied school photograph completely clear on authenticated pages. */
+#app{background:transparent!important}
+#app:before{background-image:var(--school-bg)!important;background-size:100% 100%!important;background-position:center!important;background-repeat:no-repeat!important;background-color:#dceeff!important}
+#app:after{display:none!important}
+main{background:transparent!important}
+header{height:76px!important;background:#fff!important;border-bottom:1px solid #dce6f2!important;padding:0 28px!important;box-shadow:0 2px 16px rgba(12,49,94,.06);position:sticky;top:0;z-index:8}
+.header-title-wrap{display:flex;align-items:center;gap:10px}.header-title-wrap>div{min-width:0}
+header h2{font-size:21px!important;font-weight:800!important;letter-spacing:-.25px;margin:0!important;color:#0a326f!important}
+header h2:before{content:'✦'!important;font-size:17px;margin-right:9px!important;color:#1477e9!important}
+header small{font-size:11px!important;color:#5c759b!important;display:block;margin-top:4px}
+.header-right{gap:18px!important}.header-date{font-size:10px!important;color:#173968!important}.bell{width:38px!important;height:38px!important;background:#f2f7ff!important;border:1px solid #e0ebf7;font-size:18px!important}
+.mobile-menu{display:none;border:0;background:#eef5ff;color:#0b4f9e;border-radius:10px;width:40px;height:40px;font-size:20px}
+aside{width:250px!important;padding:20px 14px 14px!important;background:linear-gradient(180deg,#062c67 0%,#061e49 100%)!important;border-radius:0!important;box-shadow:12px 0 32px rgba(5,35,82,.18)!important}
+.brand{height:64px!important;padding:4px 10px 14px!important;border-bottom:1px solid rgba(255,255,255,.10);gap:12px!important}
+.brand-avatar{width:46px!important;height:46px!important;font-size:22px!important;box-shadow:0 5px 14px rgba(0,0,0,.12)}
+.brand b{font-size:14px!important}.brand small{font-size:10px!important}.brand>span{font-size:25px!important}
+nav{gap:5px!important;margin-top:16px!important}nav button{height:43px!important;border-radius:11px!important;padding:0 13px!important;font-size:12px!important;gap:12px!important;color:#dce9fb!important;transition:.18s ease}
+nav button span{font-size:11.5px!important}nav button:hover{background:rgba(255,255,255,.08)!important;box-shadow:none!important;transform:translateX(2px)}
+nav button.active{background:linear-gradient(90deg,#087cf1,#1169d8)!important;box-shadow:0 8px 18px rgba(3,116,239,.25)!important;color:#fff!important}
+.sidebottom{border-top:1px solid rgba(255,255,255,.10);padding-top:10px}.sidebottom button{height:42px!important;border-radius:11px!important;font-size:12px!important}
+main{margin-left:250px!important}#content{padding:20px 22px 28px!important;min-height:calc(100vh - 76px)!important}
+.card,.dash-panel{background:#fff!important;border:1px solid #dfe8f3!important;border-radius:var(--radius)!important;box-shadow:var(--shadow)!important}
+.sectionhead{margin-bottom:16px!important}.sectionhead h3,.card h3{font-size:16px!important;color:#12386f!important}.muted{font-size:12px!important;color:#7185a4!important}
+.toolbar{background:#f7faff;border:1px solid #e4edf7;border-radius:12px;padding:10px;margin-bottom:14px!important}.toolbar input,.toolbar select{min-height:40px!important;border-radius:9px!important;border-color:#d7e3f0!important;background:#fff!important;color:#29466e}
+.btn,.primary{min-height:40px!important;border-radius:10px!important;padding:9px 15px!important;transition:.18s ease}.btn:hover,.primary:hover{transform:translateY(-1px);box-shadow:0 6px 14px rgba(10,85,166,.12)}
+.primary{background:linear-gradient(135deg,#0b7cf0,#0969dc)!important}
+.tablewrap{border:1px solid #dfe8f3!important;border-radius:12px!important;box-shadow:0 3px 10px rgba(15,55,100,.03);background:#fff}
+.table th{padding:12px 13px!important;background:#f3f7fc!important;color:#60789e!important;font-size:9px!important;border-bottom:1px solid #dce6f2!important}
+.table td{padding:12px 13px!important;font-size:12px!important;color:#284568;border-bottom:1px solid #edf2f7!important}.table tr:last-child td{border-bottom:0}.table tbody tr:hover,.table tr:hover td{background:#f9fbfe}
+.actions .small{min-width:36px;min-height:34px;border-radius:9px!important}
+/* Dashboard */
+.dashboard-grid{gap:16px!important}.dashboard-stats{gap:14px!important}.dash-stat{min-height:105px!important;border-radius:14px!important;padding:17px 18px!important;box-shadow:0 10px 22px rgba(16,63,120,.13)!important}
+.dash-stat .label{font-size:12px!important;letter-spacing:.1px}.dash-stat .num{font-size:29px!important}.dash-stat .icon{left:auto!important;right:16px!important;bottom:16px!important;font-size:27px!important;opacity:.75!important}.dash-stat .stat-link{font-size:9px!important;bottom:15px!important;left:18px;right:auto!important}
+.dash-panels{gap:14px!important}.attendance-middle{grid-template-columns:1fr 1fr .9fr!important}.dash-panel{min-height:205px!important;padding:16px!important}.dash-panel h3{font-size:13px!important}.chart-subtitle{font-size:9px!important}.chart-total{font-size:9px!important;padding:5px 9px!important}
+.mini-chart{height:145px!important;margin-top:9px!important}.mini-track{height:104px!important;width:17px!important}.mini-label{font-size:7px!important}.mini-value{font-size:8px!important}
+.status-panel{grid-template-columns:120px 1fr!important}.donut{width:105px!important;height:105px!important}.donut:after{width:68px!important;height:68px!important}.donut-text{font-size:18px!important}.donut-text small{font-size:9px!important}.status-list{font-size:9px!important;line-height:2.1!important}
+.dash-actions{gap:12px!important}.dash-action{height:66px!important;border-radius:12px!important;font-size:10px!important;box-shadow:0 8px 18px rgba(20,65,120,.11)!important}.dash-action span{font-size:19px!important}
+/* Forms and camera */
+.form{gap:13px!important}.form label{font-size:12px!important;color:#375474}.form input,.form select{min-height:42px!important;border-radius:10px!important;border-color:#d6e2ef!important}.notice{border:1px solid #d7e8fb;background:#eff6ff!important;border-radius:10px!important}.modal{background:rgba(4,20,47,.72)!important;backdrop-filter:blur(4px)}.modalcard{border-radius:18px!important;padding:20px!important;box-shadow:0 24px 70px rgba(0,0,0,.25)}.camera{border-radius:15px!important}.guide{border-color:rgba(255,255,255,.9)!important}
+/* Make face-registration actions obvious */
+.camera + .notice{font-weight:700}.modalcard #camAction{min-width:150px}
+.toast{border-radius:12px!important;padding:13px 17px!important;box-shadow:0 14px 35px rgba(0,0,0,.2)!important}
+/* Mobile / tablet */
+@media(max-width:1100px){aside{width:230px!important}main{margin-left:230px!important}.attendance-middle{grid-template-columns:1fr 1fr!important}.attendance-middle .status-panel{grid-column:1/-1}.dashboard-stats{grid-template-columns:repeat(2,1fr)!important}}
+@media(max-width:760px){
+  #app:before{background-size:cover!important;background-position:center!important;background-attachment:scroll!important}
+  header{height:64px!important;padding:0 12px!important}.mobile-menu{display:block}header h2{font-size:17px!important}.header-date{display:none}.header-right{gap:7px!important}.bell{width:34px!important;height:34px!important}
+  aside{width:270px!important;left:-285px!important;transition:left .22s ease;z-index:30;box-shadow:18px 0 45px rgba(2,25,61,.3)!important}aside.open{left:0!important}main{margin-left:0!important}#content{padding:12px!important}
+  .dashboard-stats{grid-template-columns:1fr 1fr!important;gap:9px!important}.dash-stat{min-height:88px!important;padding:13px!important}.dash-stat .num{font-size:24px!important}.dash-stat .label{font-size:10px!important}.dash-stat .stat-link{font-size:7px!important;left:13px!important;bottom:11px!important}
+  .attendance-middle{grid-template-columns:1fr!important}.attendance-middle .status-panel{grid-column:auto}.dash-panel{min-height:190px!important}.dash-actions{grid-template-columns:repeat(2,1fr)!important;gap:8px!important}.dash-action{height:60px!important}
+  .sectionhead{align-items:flex-start!important}.sectionhead .btn{white-space:nowrap}.toolbar{padding:8px}.toolbar input,.toolbar select,.toolbar .btn{flex:1 1 150px}.table th,.table td{padding:10px!important}
+}
+@media(max-width:430px){.dashboard-stats{grid-template-columns:1fr!important}.dash-actions{grid-template-columns:1fr 1fr!important}.dash-action{font-size:8px!important}.card{padding:13px!important}.form{grid-template-columns:1fr!important}.full{grid-column:auto!important}}
