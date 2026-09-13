@@ -161,3 +161,13 @@ nav button,nav button span{font-size:13px!important}
 .sidebottom button,.sidebottom button span{font-size:13px!important}
 @media(min-width:901px){nav button{height:40px!important}.sidebottom button{height:42px!important}}
 @media(max-width:760px){aside{width:270px!important;left:-285px!important}.brand b{font-size:15px!important}.brand small{font-size:11px!important}nav button{height:44px!important;font-size:13px!important}nav button span{font-size:13px!important}.sidebottom button{font-size:13px!important}.sidebottom button span{font-size:13px!important}}
+
+/* V4.6 — Mobile sidebar text visibility */
+@media(max-width:760px){
+  aside{width:270px!important;left:-285px!important;}
+  aside.open{left:0!important;}
+  nav button span{display:inline!important;font-size:13px!important;}
+  .sidebottom span{display:inline!important;font-size:13px!important;}
+  .brand>div:not(.brand-avatar){display:block!important;}
+  .brand>span{display:block!important;}
+}
