@@ -8,9 +8,19 @@
 <body>
 <div id="loginPage">
   <div class="login-reference" aria-label="Masuk ke Sistem">
-    <button class="login-hotspot admin" onclick="selectLogin('admin')" aria-label="Login Admin"></button>
-    <button class="login-hotspot piket" onclick="selectLogin('piket')" aria-label="Login Guru Piket"></button>
-    <button class="login-hotspot guru" onclick="selectLogin('guru')" aria-label="Login Guru"></button>
+    <div class="login-hero-copy">
+      <div class="hero-badge">🏫 SD NEGERI KIUPUNU</div>
+      <h1>Sistem Absensi<br>Guru &amp; Siswa</h1>
+      <p>Disiplin Hari Ini,<br>Masa Depan yang Lebih Baik</p>
+    </div>
+    <div class="login-choice-card">
+      <h2>Masuk ke Sistem</h2>
+      <p>Pilih jenis akun untuk melanjutkan</p>
+      <button class="login-choice admin" onclick="selectLogin('admin')"><span>👤</span><b>Login Admin</b><small>Kelola sistem dan data</small></button>
+      <button class="login-choice piket" onclick="selectLogin('piket')"><span>👨‍🏫</span><b>Login Guru Piket</b><small>Absen Guru</small></button>
+      <button class="login-choice guru" onclick="selectLogin('guru')"><span>🧑‍🎓</span><b>Login Guru</b><small>Absen Siswa</small></button>
+      <div class="login-school-foot"><b>SD NEGERI KIUPUNU</b><small>Sistem Absensi Berbasis Kamera &amp; QR</small></div>
+    </div>
   </div>
   <div id="loginFormPanel" class="login-form-panel hidden">
     <div class="login-form-card">

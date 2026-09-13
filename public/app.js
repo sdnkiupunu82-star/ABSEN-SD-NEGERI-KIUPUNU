@@ -15,7 +15,7 @@ function nav(){let n=[['dashboard','⌂','Dashboard']];if(me.role==='admin')n.pu
 function go(x){({dashboard,teachers,students,manual,users,settings,schoolSettings:settings,audit,teacherAttendance,studentAttendance,daily,reports}[x]||dashboard)()}
 function setTitle(x){$('title').textContent=x}setInterval(()=>{$('clock').textContent=new Date().toLocaleString('id-ID',{weekday:'long',day:'numeric',month:'long',year:'numeric',hour:'2-digit',minute:'2-digit',second:'2-digit'})},1000);
 async function dashboard(){
-  setTitle('Dashboard Admin');
+  setTitle('Dashboard ' + roleName(me.role));
   const [d,school]=await Promise.all([api('/api/dashboard'),api('/api/info')]);
   const name=school.name||'SD NEGERI KIUPUNU';
   $('schoolPill').textContent=name;$('loginSchoolName').textContent=name;
