@@ -59,3 +59,11 @@ header{background:rgba(255,255,255,.96);backdrop-filter:blur(8px)}
 #app:before{background-size:70% auto;background-position:center center;background-repeat:no-repeat;background-color:#dceeff}
 .dash-panel-wide{min-width:0;overflow:hidden}.chart-subtitle{font-size:8px;color:#6b7f9f;margin:-3px 0 4px}.all-attendance-chart{overflow-x:auto;justify-content:flex-start;padding:10px 6px 24px;min-height:122px}.all-attendance-chart .bar-group{flex:0 0 28px;min-width:28px}.all-attendance-chart .bar-label{font-size:7px;transform:rotate(-45deg);transform-origin:top center;margin-top:5px;white-space:nowrap}.status-list{line-height:1.9}
 @media(max-width:900px){#loginPage,#app:before{background-size:70% auto;background-attachment:scroll}}
+/* V3.1 FINAL SCHOOL BACKGROUND — use the user's latest 1024×640 school image */
+#loginPage{background-image:var(--school-bg);background-size:100% 100%;background-position:center;background-repeat:no-repeat;background-attachment:fixed;background-color:#dceeff}
+#app:before{background-image:var(--school-bg);background-size:100% 100%;background-position:center;background-repeat:no-repeat;background-attachment:fixed;background-color:#dceeff}
+/* Keep every part of the school image visible on desktop while the UI remains readable. */
+.login-choice-card{background:rgba(255,255,255,.97);}
+#app:after{background:rgba(240,248,255,.82)}
+@media(max-width:900px){#loginPage,#app:before{background-size:100% 100%;background-attachment:scroll}}
+@media(max-width:720px){#loginPage,#app:before{background-size:100% 100%}}
