@@ -150,53 +150,12 @@ main{margin-left:250px!important}#content{padding:20px 22px 28px!important;min-h
 }
 @media(max-width:430px){.dashboard-stats{grid-template-columns:1fr!important}.dash-actions{grid-template-columns:1fr 1fr!important}.dash-action{font-size:8px!important}.card{padding:13px!important}.form{grid-template-columns:1fr!important}.full{grid-column:auto!important}}
 
-/* V4.1 SIDEBAR FIX — semua menu tetap terlihat tanpa perlu zoom-out */
-aside{
-  display:flex!important;
-  flex-direction:column!important;
-  min-height:100vh!important;
-  height:100vh!important;
-  overflow:hidden!important;
-}
-aside nav{
-  flex:1 1 auto!important;
-  min-height:0!important;
-  overflow-y:auto!important;
-  overflow-x:hidden!important;
-  align-content:start!important;
-  padding-right:2px!important;
-  scrollbar-width:thin;
-  scrollbar-color:rgba(255,255,255,.22) transparent;
-}
-aside nav::-webkit-scrollbar{width:5px}
-aside nav::-webkit-scrollbar-track{background:transparent}
-aside nav::-webkit-scrollbar-thumb{background:rgba(255,255,255,.22);border-radius:10px}
-aside .sidebottom{
-  flex:0 0 auto!important;
-  margin-top:8px!important;
-  padding-bottom:0!important;
-  background:inherit;
-}
-aside .sidebottom button{display:flex!important;align-items:center!important;gap:12px!important}
-@media(max-width:900px){
-  aside{height:100vh!important;min-height:100vh!important}
-  aside nav{overflow-y:auto!important}
-}
 
-/* V4.2 — profile photos, mobile sidebar labels, and mobile login background */
-.profile-cell{display:flex;align-items:center;gap:7px;min-width:86px}.profile-thumb{width:42px;height:42px;border-radius:50%;object-fit:cover;border:2px solid #e3edf8;background:#f3f7fc}.photo-upload{position:relative;display:inline-flex!important;align-items:center;justify-content:center;padding:6px 8px!important;min-width:34px!important;min-height:32px!important}.photo-upload input{display:none!important}
-@media(max-width:760px){
-  /* On mobile the sidebar is expanded when opened, so labels must remain visible. */
-  aside{width:282px!important;left:-300px!important;padding:16px 13px 14px!important}
-  aside.open{left:0!important}
-  .brand{justify-content:flex-start!important}
-  .brand>div:not(.brand-avatar),.brand>span,nav button span,.sidebottom span{display:block!important}
-  .brand>span{margin-left:auto!important}
-  nav button{justify-content:flex-start!important;padding:0 13px!important;font-size:12px!important}
-  nav button span{font-size:12px!important}
-  .sidebottom{display:block!important}
-  /* Prevent the login photo from being vertically stretched on phones. */
-  #loginPage{min-height:100svh!important;height:100svh!important;padding:0!important;overflow:hidden!important;background-image:var(--school-bg)!important;background-size:cover!important;background-position:center center!important;background-repeat:no-repeat!important;background-attachment:scroll!important}
-  .login-reference{width:100vw!important;height:100svh!important;max-width:none!important;max-height:none!important;aspect-ratio:auto!important;border-radius:0!important;background-size:cover!important;background-position:center center!important;background-repeat:no-repeat!important;box-shadow:none!important}
-}
-@media(max-width:430px){.profile-thumb{width:38px;height:38px}.profile-cell{min-width:78px;gap:5px}.photo-upload{min-width:31px!important;padding:5px!important}}
+/* V4.3 FIX — Face button + readable sidebar */
+aside{display:flex!important;flex-direction:column!important;overflow:hidden!important}
+#nav{flex:1 1 auto!important;min-height:0!important;overflow-y:auto!important;overflow-x:hidden!important;padding-right:2px!important;scrollbar-width:thin}
+.sidebottom{flex:0 0 auto!important;margin-top:8px!important}
+nav button,nav button span{font-size:13px!important}
+.sidebottom button,.sidebottom button span{font-size:13px!important}
+@media(min-width:901px){nav button{height:40px!important}.sidebottom button{height:42px!important}}
+@media(max-width:760px){aside{width:270px!important;left:-285px!important}.brand b{font-size:15px!important}.brand small{font-size:11px!important}nav button{height:44px!important;font-size:13px!important}nav button span{font-size:13px!important}.sidebottom button{font-size:13px!important}.sidebottom button span{font-size:13px!important}}
